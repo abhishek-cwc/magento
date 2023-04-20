@@ -1,0 +1,15 @@
+bin/magento setup:install \
+--base-url=http://local.firstp.com \
+--db-host=localhost \
+--db-name=magento \
+--db-user=root \
+--db-password=Abhishek@123 \
+--admin-firstname=admin \
+--admin-lastname=admin \
+--admin-email=admin@admin.com \
+--admin-user=admin \
+--admin-password=admin@123 \
+--language=en_US \
+--currency=USD \
+--timezone=America/Chicago \
+--use-rewrites=1
