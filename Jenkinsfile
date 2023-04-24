@@ -30,8 +30,10 @@ def cleanWs() {
 }
 
 def deployCode() {
+ sh '''
  echo "start magento command"
  php bin/magento setup:static-content:deploy -f
+ '''
 }
 
 
