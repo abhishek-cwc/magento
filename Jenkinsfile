@@ -31,9 +31,9 @@ def cleanWs() {
 
 def deployCode() {
  sh '''
- php /usr/local/bin/composer install --no-dev
+ #php /usr/local/bin/composer install --no-dev
  echo "start magento command"
- php bin/magento setup:static-content:deploy -f
+ php bin/magento setup:di:compile
  '''
 }
 
