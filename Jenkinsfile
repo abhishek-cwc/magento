@@ -1,5 +1,5 @@
 pipeline {
-   agent none
+   agent any
   
   environment {
     MYSQL_HOST          = 'db'
