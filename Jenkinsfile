@@ -1,5 +1,8 @@
 pipeline {
-   
+   agent {
+    label 'magento'
+  }
+  
   environment {
     MYSQL_HOST          = 'db'
     MYSQL_USER          = 'root'
