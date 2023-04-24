@@ -31,6 +31,7 @@ def cleanWs() {
 
 def deployCode() {
  echo "start magento command";
+ php bin/magento setup:upgrade
 }
 
 
