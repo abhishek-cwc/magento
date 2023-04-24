@@ -13,7 +13,8 @@ pipeline {
     stage('clean WS') {
       steps {
       	cleanWs() 
-      }	
+      }
+    }	
     
     stage('Deploy Code') {
           steps {
@@ -22,7 +23,6 @@ pipeline {
         }
         
     } 
-  }
 }
 
 def cleanWs() {
