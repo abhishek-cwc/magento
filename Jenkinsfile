@@ -31,7 +31,6 @@ def cleanWs() {
 
 def deployCode() {
  echo "start magento command";
- php -d memory_limit=-1 bin/magento setup:upgrade
 }
 
 
