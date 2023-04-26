@@ -22,7 +22,7 @@ pipeline {
       		scannerHome = tool 'SonarScanner 2.5'
       	}
       	withSonarQubeEnv(installationName: 'SonarQube') {
-      	 sh """${scannerHome}/bin/sonar-scanner \
+      	 sh """/usr/local/bin/sonar-scanner \
       	 -D sonar.login=sqa_9810f470beb03655edc2ee233d4636b713f197e6
       	 """	
       	}
