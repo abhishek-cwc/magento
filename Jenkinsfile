@@ -22,7 +22,7 @@ pipeline {
       		scannerHome = tool 'SonarScanner 2.5'
       	}
       	withSonarQubeEnv(installationName: 'SonarQube') {
-      	 sh """${scannerHome}/bin/sonar-scanner
+      	 sh """${scannerHome}/bin/sonar-runner
       	 """	
       	}
       	
