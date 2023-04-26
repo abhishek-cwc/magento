@@ -19,7 +19,7 @@ pipeline {
     stage('SonarQube Scan') {
       steps {
        script {
-      		scannerHome = tool 'SonarScanner 4.0'
+      		scannerHome = tool 'SonarScanner 2.4'
       	}
       	
       }
