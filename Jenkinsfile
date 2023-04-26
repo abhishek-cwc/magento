@@ -25,6 +25,7 @@ pipeline {
       	 sh """/usr/local/bin/sonar-scanner \
       	 -Dsonar.language='php' \
       	 -Dsonar.sourceEncoding='UTF-8' \
+      	 -Dsonar.sources='app' \
       	 -D sonar.projectName='firstP'
       	 """	
       	}
