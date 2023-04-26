@@ -26,6 +26,7 @@ pipeline {
       	 -Dsonar.language='php' \
       	 -Dsonar.sourceEncoding='UTF-8' \
       	 -Dsonar.sources='app' \
+      	 -Dsonar.java.jdkHome=/usr/lib/jvm/java-11-openjdk-amd64/bin/java \
       	 -D sonar.projectName='firstP'
       	 """	
       	}
