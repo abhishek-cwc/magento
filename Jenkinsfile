@@ -22,6 +22,7 @@ pipeline {
       		scannerHome = tool 'SonarScanner 2.5'
       	}
       	withSonarQubeEnv(installationName: 'SonarQube') {
+      	 sh 'java -version'
       	 sh """/usr/local/bin/sonar-scanner \
       	 -Dsonar.language='php' \
       	 -Dsonar.sourceEncoding='UTF-8' \
