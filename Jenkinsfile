@@ -14,7 +14,15 @@ pipeline {
       steps {
       	cleanWs() 
       }
-    }	
+    }
+    
+    stage('PHP Code Scan') {
+      steps {
+      	// create folder to save report output
+      	sh 'mkdir -p build/reports'
+      	phpUnit()
+      }
+    }		
     
     stage('SonarQube Scan') {
       steps {
@@ -44,6 +52,12 @@ pipeline {
     } 
 }
 
+
+def phpUnit() {
+ echo "start php unit";
+ sh './vendor/bin/phpunit -d memory_limit=-1 --testbox-html `pwd`/build/reports/phpunit.html -c phpunit.xml.dist --coverage-clover `pwd`/build/reports/coverage.xml --log-junit=`pwd`/build/reports/exceution-reports.xml || exit 0'
+}
+
 def cleanWs() {
  echo "cleanWs";
 }
@@ -52,8 +66,8 @@ def deployCode() {
  sh '''
  #php /usr/local/bin/composer install --no-dev
  echo "start magento command"
- php -d memory_limmit=-1 bin/magento setup:upgrade
- php -d memory_limmit=-1 bin/magento setup:di:compile
+ #php -d memory_limmit=-1 bin/magento setup:upgrade
+ #php -d memory_limmit=-1 bin/magento setup:di:compile
  '''
 }
 
