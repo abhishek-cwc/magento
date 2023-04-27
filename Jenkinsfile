@@ -22,12 +22,13 @@ pipeline {
       		scannerHome = tool 'SonarScanner 2.5'
       	}
       	withSonarQubeEnv(installationName: 'SonarQube') {
-      	 sh 'java -version'
-      	 sh """/usr/local/bin/sonar-scanner \
-      	 -Dsonar.language='php' \
-      	 -Dsonar.sourceEncoding='UTF-8' \
-      	 -Dsonar.sources='app' \
-      	 -Dsonar.projectName='firstP'
+
+      	 sh """sonar-scanner \
+      	 -Dsonar.projectKey=firstp \
+  	-Dsonar.projectBaseDir=/var/www/html/firstp/app/code \
+  	-Dsonar.sources=/var/www/html/firstp/app/code \
+  	-Dsonar.login=sqp_d32308828005ebaedf2a6a40fc52ce7dfd43a0f6 \
+  	-Dsonar.host.url=http://localhost:9000
       	 """	
       	}
       	
