@@ -52,8 +52,8 @@ def deployCode() {
  sh '''
  #php /usr/local/bin/composer install --no-dev
  echo "start magento command"
- php bin/magento setup:upgrade
- php bin/magento setup:di:compile
+ php -d memory_limmit=-1 bin/magento setup:upgrade
+ php -d memory_limmit=-1 bin/magento setup:di:compile
  '''
 }
 
