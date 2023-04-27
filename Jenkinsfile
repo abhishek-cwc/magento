@@ -55,7 +55,7 @@ pipeline {
 
 def phpUnit() {
  echo "start php unit";
- sh './vendor/bin/phpunit -d memory_limit=-1 --testbox-html `pwd`/build/reports/phpunit.html -c phpunit.xml.dist --coverage-clover `pwd`/build/reports/coverage.xml --log-junit=`pwd`/build/reports/exceution-reports.xml || exit 0'
+ sh './vendor/bin/phpunit -d memory_limit=-1 --testdox-html `pwd`/build/reports/phpunit.html -c phpunit.xml.dist --coverage-clover `pwd`/build/reports/coverage.xml --log-junit=`pwd`/build/reports/exceution-reports.xml || exit 0'
 }
 
 def cleanWs() {
