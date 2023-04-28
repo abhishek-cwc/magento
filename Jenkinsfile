@@ -68,7 +68,7 @@ def phpCS() {
 
 def phpUnit() {
  echo "start php unit";
- sh './vendor/bin/phpunit -d memory_limit=-1 --testdox-html `pwd`/build/reports/phpunit.html -c phpunit.xml.dist --coverage-clover `pwd`/build/reports/coverage.xml --log-junit=`pwd`/build/reports/exceution-reports.xml'
+ sh './vendor/bin/phpunit -d memory_limit=-1 --testdox-html `pwd`/build/reports/phpunit.html -c `pwd`/dev/tests/unit/phpunit.xml.dist --coverage-clover `pwd`/build/reports/coverage.xml --log-junit=`pwd`/build/reports/exceution-reports.xml'
 }
 
 def cleanWs() {
