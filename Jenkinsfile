@@ -20,6 +20,7 @@ pipeline {
       steps {
       	// create folder to save report output
       	sh 'mkdir -p build/reports'
+      	phpCS()
       	phpUnit()
       }
     }		
@@ -52,10 +53,15 @@ pipeline {
     } 
 }
 
+def phpCS() {
+ echo "start php unit";
+ sh './vendor/squizlabs/php_codesniffer/bin/phpcs --config-set installed_paths vendor/magento/magento-coding-standard'
+ sh './vendor/squizlabs/php_codesniffer/bin/phpcs -d memory_limit=-1 --report=checkstyle --report-file=`pwd`/build/reports/checkstyle.xml --standard=Magento2 --warning-severity=0 --extension=php,js,phtml app || exit 0'
+}
 
 def phpUnit() {
  echo "start php unit";
- sh './vendor/bin/phpunit -d memory_limit=-1 --testdox-html `pwd`/build/reports/phpunit.html -c phpunit.xml.dist --coverage-clover `pwd`/build/reports/coverage.xml --log-junit=`pwd`/build/reports/exceution-reports.xml || exit 0'
+ sh './vendor/bin/phpunit -d memory_limit=-1 --testdox-html `pwd`/build/reports/phpunit.html -c phpunit.xml.dist --coverage-clover `pwd`/build/reports/coverage.xml --log-junit=`pwd`/build/reports/exceution-reports.xml'
 }
 
 def cleanWs() {
