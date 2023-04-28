@@ -41,8 +41,8 @@ pipeline {
       	 -Dsonar.projectKey=firstp \
   	-Dsonar.projectBaseDir=/var/lib/jenkins/workspace/firstp/app/code \
   	-Dsonar.sources=/var/lib/jenkins/workspace/firstp/app/code/Webkul \
-  	-Dsonar.php.coverage.reportPaths='build/reports/coverage.xml' \
-  	-Dsonar.php.tests.reportPath='build/reports/exceution-reports.xml' \
+  	-Dsonar.php.coverage.reportPaths=build/reports/coverage.xml \
+  	-Dsonar.php.tests.reportPath=build/reports/exceution-reports.xml \
   	-Dsonar.login=sqp_d32308828005ebaedf2a6a40fc52ce7dfd43a0f6 \
   	-Dsonar.host.url=http://localhost:9000
       	 """	
