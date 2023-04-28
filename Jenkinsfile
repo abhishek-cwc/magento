@@ -18,10 +18,15 @@ pipeline {
     
     stage('PHP Code Scan') {
       steps {
+        echo 'php Syntax check'
+        sh 'php -l app/'
+        
       	// create folder to save report output
       	sh 'mkdir -p build/reports'
+      	
       	phpCS()
       	phpUnit()
+      	
       }
     }		
     
@@ -56,7 +61,9 @@ pipeline {
 def phpCS() {
  echo "start php unit";
  sh './vendor/squizlabs/php_codesniffer/bin/phpcs --config-set installed_paths vendor/magento/magento-coding-standard'
- sh './vendor/squizlabs/php_codesniffer/bin/phpcs -d memory_limit=-1 --report=checkstyle --report-file=`pwd`/build/reports/checkstyle.xml --standard=Magento2 --warning-severity=0 --extension=php,js,phtml app || exit 0'
+ 
+ sh './vendor/squizlabs/php_codesniffer/bin/phpcs -d memory_limit=-1 --report=checkstyle --report-file=`pwd`/build/reports/checkstyle.xml --standard=Magento2 --warning-severity=0 --extensions=php,js,phtml app || exit 0'
+ 
 }
 
 def phpUnit() {
