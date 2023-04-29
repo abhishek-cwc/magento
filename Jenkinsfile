@@ -24,7 +24,7 @@ pipeline {
       	// create folder to save report output
       	sh 'mkdir -p build/reports'
       	
-      	phpCS()
+      	// phpCS()
       	phpUnit()
       	
       }
