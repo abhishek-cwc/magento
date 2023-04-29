@@ -43,6 +43,7 @@ pipeline {
   	-Dsonar.sources=/var/lib/jenkins/workspace/firstp/app/code/Webkul \
   	-Dsonar.php.coverage.reportPaths=/var/lib/jenkins/workspace/firstp/build/reports/coverage.xml \
   	-Dsonar.php.tests.reportPath=/var/lib/jenkins/workspace/firstp/build/reports/exceution-reports.xml \
+  	-Dsonar.exclusions = /var/lib/jenkins/workspace/firstp/app/code/*/*/Test \
   	-Dsonar.login=sqp_d32308828005ebaedf2a6a40fc52ce7dfd43a0f6 \
   	-Dsonar.host.url=http://localhost:9000
       	 """	
