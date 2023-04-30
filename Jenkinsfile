@@ -52,8 +52,7 @@ pipeline {
       }
     }
     
-      #	-Dsonar.sources=/var/lib/jenkins/workspace/firstp/app/code/ \
-      # -Dsonar.exclusions=/var/lib/jenkins/workspace/firstp/app/code/Webkul/Grid/Block \
+      
       
     stage('Deploy Code') {
           steps {
@@ -87,6 +86,10 @@ def deployCode() {
  echo "start magento command"
  #php -d memory_limmit=-1 bin/magento setup:upgrade
  #php -d memory_limmit=-1 bin/magento setup:di:compile
+ 
+ 	#	-Dsonar.sources=/var/lib/jenkins/workspace/firstp/app/code/ \
+      # -Dsonar.exclusions=/var/lib/jenkins/workspace/firstp/app/code/Webkul/Grid/Block \
+      
  '''
 }
 
