@@ -42,7 +42,7 @@ pipeline {
       	 -Dsonar.scm.exclusions.disabled=true \
   	-Dsonar.projectBaseDir=/var/lib/jenkins/workspace/firstp/app/code \
   	-Dsonar.sources=/var/lib/jenkins/workspace/firstp/app/code/ \
-  	-Dsonar.coverage.exclusions=/var/lib/jenkins/workspace/firstp/app/code/*/*/Block \
+  	-Dsonar.coverage.exclusions=['/var/lib/jenkins/workspace/firstp/app/code/*/*/Block'] \
   	-Dsonar.php.coverage.reportPaths=/var/lib/jenkins/workspace/firstp/build/reports/coverage.xml \
   	-Dsonar.php.tests.reportPath=/var/lib/jenkins/workspace/firstp/build/reports/exceution-reports.xml \
   	-Dsonar.login=sqp_d32308828005ebaedf2a6a40fc52ce7dfd43a0f6 \
