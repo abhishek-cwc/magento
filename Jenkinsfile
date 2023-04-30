@@ -39,7 +39,6 @@ pipeline {
 
       	 sh """/home/abhishek/.sonar/sonar-scanner-4.7.0.2747-linux/bin/sonar-scanner \
       	-Dsonar.projectKey=firstp \
-      	-Dsonar.scm.exclusions.disabled=true
   	-Dsonar.projectBaseDir=/var/lib/jenkins/workspace/firstp/app/code \
   	-Dsonar.sources=/var/lib/jenkins/workspace/firstp/app/code/ \
   	-Dsonar.exclusions=/var/lib/jenkins/workspace/firstp/app/code/Webkul/Grid/Block \
