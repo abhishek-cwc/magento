@@ -40,8 +40,8 @@ pipeline {
       	 sh """/home/abhishek/.sonar/sonar-scanner-4.7.0.2747-linux/bin/sonar-scanner \
       	-Dsonar.projectKey=firstp \
   	-Dsonar.projectBaseDir=/var/lib/jenkins/workspace/firstp/app/code \
-  	-Dsonar.sources=/var/lib/jenkins/workspace/firstp/app/code/ \
-  	-Dsonar.exclusions=/var/lib/jenkins/workspace/firstp/app/code/Webkul/Grid/Block \
+  	-Dsonar.sources[] = /var/lib/jenkins/workspace/firstp/app/code/Webkul/Grid/Model \
+  	-Dsonar.sources[] = /var/lib/jenkins/workspace/firstp/app/code/Webkul/Grid/Controller \
   	-Dsonar.php.coverage.reportPaths=/var/lib/jenkins/workspace/firstp/build/reports/coverage.xml \
   	-Dsonar.php.tests.reportPath=/var/lib/jenkins/workspace/firstp/build/reports/exceution-reports.xml \
   	-Dsonar.login=sqp_d32308828005ebaedf2a6a40fc52ce7dfd43a0f6 \
@@ -52,6 +52,9 @@ pipeline {
       }
     }
     
+      #	-Dsonar.sources=/var/lib/jenkins/workspace/firstp/app/code/ \
+      # -Dsonar.exclusions=/var/lib/jenkins/workspace/firstp/app/code/Webkul/Grid/Block \
+      
     stage('Deploy Code') {
           steps {
             deployCode()
