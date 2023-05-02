@@ -55,6 +55,7 @@ class AddRow extends \Magento\Backend\Block\Widget\Form\Container
      */
     public function getHeaderText()
     {
+    	return;
         return __('Add RoW Data');
     }
 
@@ -67,6 +68,7 @@ class AddRow extends \Magento\Backend\Block\Widget\Form\Container
      */
     protected function _isAllowedAction($resourceId)
     {
+    	return;
         return $this->_authorization->isAllowed($resourceId);
     }
 

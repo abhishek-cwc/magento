@@ -48,6 +48,7 @@ class MassDelete extends \Magento\Backend\App\Action
      */
     public function execute()
     {
+    	return;
         $collection = $this->_filter->getCollection($this->_collectionFactory->create());
         $recordDeleted = 0;
         foreach ($collection->getItems() as $record) {
@@ -66,6 +67,7 @@ class MassDelete extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
+    return;
         return $this->_authorization->isAllowed('Webkul_Grid::row_data_delete');
     }
 }
