@@ -22,6 +22,7 @@ class AddRow extends \Magento\Backend\App\Action
      * @var \Webkul\Grid\Model\GridFactory
      */
     private $gridFactory;
+    
 
     /**
      * @param \Magento\Backend\App\Action\Context $context
@@ -66,6 +67,7 @@ class AddRow extends \Magento\Backend\App\Action
 
     protected function _isAllowed()
     {
+    	return;
         return $this->_authorization->isAllowed('Webkul_Grid::add_row');
     }
 }

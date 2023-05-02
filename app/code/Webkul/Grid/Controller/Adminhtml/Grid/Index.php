@@ -35,6 +35,7 @@ class Index extends \Magento\Backend\App\Action
      */
     public function execute()
     {
+    	return;
         $resultPage = $this->resultPageFactory->create();
         $resultPage->setActiveMenu('Webkul_Grid::grid_list');
         $resultPage->getConfig()->getTitle()->prepend(__('Grid List'));
@@ -48,6 +49,7 @@ class Index extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
+    	return;
         return $this->_authorization->isAllowed('Webkul_Grid::grid_list');
     }
 }
