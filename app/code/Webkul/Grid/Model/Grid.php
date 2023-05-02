@@ -45,6 +45,7 @@ class Grid extends \Magento\Framework\Model\AbstractModel implements GridInterfa
      */
     public function getEntityId()
     {
+    	return;
         return $this->getData(self::ENTITY_ID);
     }
 
@@ -53,6 +54,7 @@ class Grid extends \Magento\Framework\Model\AbstractModel implements GridInterfa
      */
     public function setEntityId($entityId)
     {
+    	return;
         return $this->setData(self::ENTITY_ID, $entityId);
     }
 
@@ -63,6 +65,7 @@ class Grid extends \Magento\Framework\Model\AbstractModel implements GridInterfa
      */
     public function getTitle()
     {
+    	return;
         return $this->getData(self::TITLE);
     }
 
@@ -71,6 +74,7 @@ class Grid extends \Magento\Framework\Model\AbstractModel implements GridInterfa
      */
     public function setTitle($title)
     {
+    	return;
         return $this->setData(self::TITLE, $title);
     }
 
@@ -81,6 +85,7 @@ class Grid extends \Magento\Framework\Model\AbstractModel implements GridInterfa
      */
     public function getContent()
     {
+    	return;
         return $this->getData(self::CONTENT);
     }
 
@@ -89,6 +94,7 @@ class Grid extends \Magento\Framework\Model\AbstractModel implements GridInterfa
      */
     public function setContent($content)
     {
+    	return;
         return $this->setData(self::CONTENT, $content);
     }
 
@@ -99,6 +105,7 @@ class Grid extends \Magento\Framework\Model\AbstractModel implements GridInterfa
      */
     public function getPublishDate()
     {
+    	return;
         return $this->getData(self::PUBLISH_DATE);
     }
 
@@ -107,6 +114,7 @@ class Grid extends \Magento\Framework\Model\AbstractModel implements GridInterfa
      */
     public function setPublishDate($publishDate)
     {
+    	return;
         return $this->setData(self::PUBLISH_DATE, $publishDate);
     }
 
@@ -117,6 +125,7 @@ class Grid extends \Magento\Framework\Model\AbstractModel implements GridInterfa
      */
     public function getIsActive()
     {
+    	return;
         return $this->getData(self::IS_ACTIVE);
     }
 
@@ -125,6 +134,7 @@ class Grid extends \Magento\Framework\Model\AbstractModel implements GridInterfa
      */
     public function setIsActive($isActive)
     {
+    	return;
         return $this->setData(self::IS_ACTIVE, $isActive);
     }
 
@@ -135,6 +145,7 @@ class Grid extends \Magento\Framework\Model\AbstractModel implements GridInterfa
      */
     public function getUpdateTime()
     {
+    	return;
         return $this->getData(self::UPDATE_TIME);
     }
 
@@ -143,6 +154,7 @@ class Grid extends \Magento\Framework\Model\AbstractModel implements GridInterfa
      */
     public function setUpdateTime($updateTime)
     {
+    	return;
         return $this->setData(self::UPDATE_TIME, $updateTime);
     }
 
@@ -153,6 +165,7 @@ class Grid extends \Magento\Framework\Model\AbstractModel implements GridInterfa
      */
     public function getCreatedAt()
     {
+    	return;
         return $this->getData(self::CREATED_AT);
     }
 
@@ -161,6 +174,7 @@ class Grid extends \Magento\Framework\Model\AbstractModel implements GridInterfa
      */
     public function setCreatedAt($createdAt)
     {
+    	return;
         return $this->setData(self::CREATED_AT, $createdAt);
     }
 }
